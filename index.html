@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="86-PHero-tube/Logo2.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>86-PHero-tube</title>
+</head>
+<body class="">
+    <header>
+        <div>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <a class="btn btn-ghost normal-case text-xl"><img src="86-PHero-tube/Logo.png" alt=""></a>
+                </div>
+                <div class="lg:navbar-center hidden lg:flex">
+                 <button id="filter-button" class="btn bg-[#25252552] text-black rounded-lg">Sort by view</button>
+                </div>
+                <div class="navbar-end">
+                  <a id="blog-btn" class="btn bg-[#FF1F3D] text-white font-semibold">Blog</a>
+                </div>
+              </div>
+              <div class="navbar-start bg-none lg:hidden">
+                <button id="filter-button2" class="btn bg-none text-[#FF1F3D] rounded-lg">Sort by view</button>
+               </div>
+        </div>
+    </header>
+    <main>
+        
+        <section>
+            <div>
+                <div id="tab-container" class="tabs tabs-boxed flex justify-center items-center gap-4 mt-10">
+                  </div>
+            </div>
+        </section>
+        <section>
+            <div id="load" class="hidden text-center my-10">
+                <span class="loading loading-spinner text-error"></span>
+
+            </div>
+        </section>
+        <section>
+            <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
+                
+            </div>
+        </section>
+    </main>
+    
+    
+
+
+
+    <script src="js/index.js"></script>
+</body>
+</html>

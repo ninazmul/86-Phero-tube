@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="86-PHero-tube/Logo2.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>86-PHero-tube</title>
+</head>
+<body>
+    <header>
+        <div>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <a class="btn btn-ghost normal-case text-xl"><img src="86-PHero-tube/Logo.png" alt=""></a>
+                </div>
+                <div class="navbar-end">
+                  <a id="home-btn" class="btn bg-[#FF1F3D] text-white font-semibold">Home</a>
+                </div>
+              </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div>
+                <div id="tab-container" class="tabs tabs-boxed flex justify-center items-center gap-4 mt-10">
+                  </div>
+            </div>
+        </section>
+        <section>
+          <div id="load" class="hidden text-center my-10">
+              <span class="loading loading-spinner text-error"></span>
+
+          </div>
+      </section>
+        <section>
+            <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 ">
+                
+            </div>
+        </section>
+        <section>
+            <h1 class="text-5xl font-bold text-center my-10">Blog Questions</h1>
+            <div class="">
+                <div class="collapse collapse-arrow bg-base-200">
+                    <input type="radio" name="my-accordion-2" checked="checked" /> 
+                    <div class="collapse-title text-xl font-medium">
+                        Discuss the scope of var, let, and const
+                    </div>
+                    <div class="collapse-content"> 
+                      <p class="text-justify">The scope of a variable in JavaScript determines where the variable can be accessed in the code. There are three types of scope in JavaScript:<br>
+
+                        Global scope: Variables declared outside of any function or block statement have global scope. They can be accessed from anywhere in the code.
+                        Function scope: Variables declared inside a function have function scope. They can only be accessed from within the function, not from outside the function.
+                        Block scope: Variables declared inside a block statement (such as an if statement or a for loop) have block scope. They can only be accessed from within the block, not from outside the block.
+                        The keywords var, let, and const are used to declare variables in JavaScript. The scope of a variable declared with var is function scope, while the scope of a variable declared with let or const is block scope.<br>
+                        
+                        Here is a table summarizing the scope of var, let, and const:
+                        <br>
+                        Keyword	Scope<br>
+                        var	Function scope<br>
+                        let	Block scope<br>
+                        const	Block scope<br>
+                        Here is an example of the difference between the scope of var and let:<br>
+                        
+                        JavaScript<br>
+                        function foo() {<br>
+                          var x = 10; // x has function scope<br>
+                          {<br>
+                            let y = 20; // y has block scope<br>
+                          }<br>
+                        }<br>
+                        
+                        console.log(x); // 10<br>
+                        console.log(y); // ReferenceError: y is not defined<br>
+                        Use code with caution. Learn more<br>
+                        In this example, the variable x is declared with var and has function scope. This means that it can be accessed from anywhere inside the function foo(). The variable y is declared with let and has block scope. This means that it can only be accessed from inside the block where it is declared.<br>
+                        
+                        The keyword const can be used to declare a constant variable. A constant variable cannot be reassigned a new value. Here is an example:<br>
+                        
+                        JavaScript<br>
+                        const PI = 3.14;<br>
+                        
+                        console.log(PI); // 3.14<br>
+                        
+                        PI = 4; // Error: Cannot assign to constant PI
+                        Use code with caution. Learn more<br>
+                        In this example, the variable PI is declared with const and assigned the value 3.14. The variable PI can never be reassigned a new value.<br>
+                        
+                        In general, it is recommended to use let or const instead of var. let and const offer more control over the scope and mutability of variables, which can help to prevent errors and improve the readability of code.</p>
+                    </div>
+                  </div>
+                  <div class="collapse collapse-arrow bg-base-200">
+                    <input type="radio" name="my-accordion-2" /> 
+                    <div class="collapse-title text-xl font-medium">
+                        Tell us the use cases of null and undefined
+
+                    </div>
+                    <div class="collapse-content"> 
+                      <p class="text-justify">The null and undefined values are used in JavaScript to represent the absence of a value.<br>
+
+                        Null is used to explicitly represent a value that is known to be absent. For example, you might use null to represent a user who has not yet been created or a product that is out of stock.
+                        Undefined is used to represent a value that is unknown or has not yet been assigned. For example, you might use undefined to represent a variable that has not yet been initialized or a function that has not yet been called.<br>
+                        Here are some of the use cases of null and undefined:<br>
+                        
+                        To represent the absence of a value in an object. For example, the following object has a name property that is set to null:
+                        JavaScript<br>
+                        const person = {<br>
+                          name: null,<br>
+                          age: 30,<br>
+                        };<br>
+                        Use code with caution. Learn more<br>
+                        To represent the absence of a value in an array. For example, <br>
+                        the following array has an empty value at the third index:<br>
+                        JavaScript<br>
+                        const numbers = [1, 2, null, 4];<br>
+                        Use code with caution. Learn more<br>
+                        To check for the absence of a value in a variable. For example, the following code checks if the variable name is undefined:<br>
+                        JavaScript<br>
+                        if (name === undefined) {<br>
+                          console.log("The name variable is undefined.");<br>
+                        }<br>
+                        Use code with caution. Learn more<br>
+                        To return a value that indicates the absence of a value. For example, the following function returns null if the input value is not found:<br>
+                        JavaScript<br>
+                        function findById(id) {<br>
+                          if (!id) {<br>
+                            return null;<br>
+                          }
+                          <br>
+                          const user = users.find(user => user.id === id);<br>
+                        
+                          return user;<br>
+                        }<br>
+                        Use code with caution. Learn more<br>
+                        It is important to note that null and undefined are not the same. null is a value that is explicitly set to null, while undefined is a value that has not yet been assigned.<br>
+                        
+                        In general, it is recommended to use null instead of undefined when you want to explicitly represent the absence of a value. This can help to make your code more readable and maintainable.</p>
+                    </div>
+                  </div>
+                  <div class="collapse collapse-arrow bg-base-200">
+                    <input type="radio" name="my-accordion-2" /> 
+                    <div class="collapse-title text-xl font-medium">
+                        What do you mean by REST API?
+                    </div>
+                    <div class="collapse-content"> 
+                      <p class="text-justify">REST API stands for Representational State Transfer Application Programming Interface. It is an architectural style for designing APIs that are based on the HTTP protocol. REST APIs are used to communicate between different applications, such as a web application and a back-end server.<br>
+
+                        The main principles of REST are:<br>
+                        
+                        Resource-oriented: Resources are the basic unit of interaction in REST APIs. A resource is an entity that can be manipulated, such as a user, a product, or an order.<br>
+                        Stateless: REST APIs are stateless, which means that each request must contain all of the information necessary to process it. This makes REST APIs more scalable and efficient.<br>
+                        Cacheable: REST APIs should be cacheable, which means that the responses can be stored in the browser or on the server to improve performance.<br>
+                        Uniform Interface: REST APIs should use a uniform interface, which means that all requests and responses should follow the same format. This makes REST APIs easier to use and understand.
+                        The most common HTTP methods used in REST APIs are:<br>
+                        
+                        GET: Used to retrieve a resource.<br>
+                        POST: Used to create a new resource.<br>
+                        PUT: Used to update an existing resource.<br>
+                        DELETE: Used to delete a resource.<br>
+                        REST APIs are a popular choice for developing APIs because they are easy to use, scalable, and efficient. They are also a good choice for developing APIs that need to be interoperable with other APIs.<br>
+                        
+                        Here are some examples of REST APIs:<br>
+                        
+                        The GitHub API allows you to interact with GitHub repositories.
+                        The Google Maps API allows you to get information about maps and locations.<br>
+                        The Stripe API allows you to process payments.
+                        If you are developing an API, REST is a good architectural style to consider. It is a well-established and widely used style that can help you to create APIs that are easy to use and efficient.</p>
+                    </div>
+                  </div>
+            </div>
+        </section>
+    </main>
+    
+    
+
+
+
+    <script src="js/blog.js"></script>
+</body>
+</html>
